@@ -1,0 +1,34 @@
+<ButtonWidget>
+    id: my_widget
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 20
+        spacing: 20
+
+        RealsenseWidget:
+            id: rs_widget
+            text: ""
+            size: 300, 500
+            size_hint: (1, 4)
+
+        GridLayout:
+            cols:3
+            
+            Button:
+                text: "Start"
+                pos_hint: {"center_x": 0.5}
+                size_hint: (1, 1)
+                on_press: root.press1()
+                
+            Button:
+                text: "Stop"
+                pos_hint: {"center_x": 0.5}
+                size_hint: (1, 1)
+                on_press: root.press2()
+            
+            Button:
+                text: "Finish"
+                pos_hint: {"center_x": 0.5}
+                size_hint: (1, 1)
+                on_press: root.press3()
